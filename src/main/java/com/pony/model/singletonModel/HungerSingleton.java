@@ -3,7 +3,7 @@ package com.pony.model.singletonModel;
 //一加载就实例化
 public class HungerSingleton {
 
-    public static HungerSingleton singleton=new HungerSingleton();
+    private static HungerSingleton singleton=new HungerSingleton();
     private String name;
     private HungerSingleton() {
         System.out.println("创建饿汉模式");
