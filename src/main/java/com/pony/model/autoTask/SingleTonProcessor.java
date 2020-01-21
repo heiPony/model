@@ -19,17 +19,12 @@ public class SingleTonProcessor implements Runnable {
 
     @Override
     public void run() {
-
         while (true){
             try {
-                Thread.sleep(1000);
                 pool.execute(new SingletonTask());
-
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
                logger.info("单例模式线程异常");
             }
-
-
         }
 
 
